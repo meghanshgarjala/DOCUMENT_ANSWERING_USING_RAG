@@ -63,10 +63,10 @@ Below is an overview of the architecture used in this project:
 ## Screenshots
 
 1. Questions Asked from the Document Context
-   ![In-Context Query Screenshot](SS\1.png)
+   (SS\1.png)
 
 2. Questions Asked Out of Context
-   ![In-Context Query Screenshot](SS\22.png)
+   (SS\22.png)
 
 
 

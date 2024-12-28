@@ -17,7 +17,7 @@ This hybrid approach ensures high accuracy for in-context queries and robust han
 
 Below is an overview of the architecture used in this project:
 
-(2.png)
+![Architecture Diagram](2.png)
 
 ---
 
@@ -63,10 +63,10 @@ Below is an overview of the architecture used in this project:
 ## Screenshots
 
 1. Questions Asked from the Document Context
-   (PROJECT SS\1.png)
+   ![In-Context Query Screenshot](SS\1.png)
 
 2. Questions Asked Out of Context
-   (PROJECT SS\22.png)
+   ![In-Context Query Screenshot](SS\22.png)
 
 
 

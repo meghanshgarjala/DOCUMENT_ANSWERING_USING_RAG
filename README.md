@@ -1,73 +1,94 @@
-# Retrieval-Augmented Generation (RAG) Application
+# Document Answering Application Using RAG
 
-## Overview
-Retrieval-Augmented Generation (RAG) is an advanced AI architecture that combines retrieval-based methods with generative models to improve the generation of contextually accurate and information-rich text. This approach is particularly useful for applications where the model needs to answer domain-specific questions, summarize documents, or provide detailed responses based on external knowledge bases.
+This project is a **Document Answering Application** that leverages **Retrieval-Augmented Generation (RAG)** to provide accurate answers to user queries based on the context of an uploaded document. The application is built with **Streamlit** and uses **ChromaDB** as its knowledge base for efficient retrieval and processing.
 
-This repository demonstrates a RAG-based application, focusing on [describe your specific use case, e.g., question answering, summarization, etc.].
+---
 
-## Key Features
-- **Retrieval Module**: Extracts relevant information from a large corpus or knowledge base.
-- **Generation Module**: Leverages a generative model (e.g., GPT, BERT-based models) to synthesize responses based on retrieved data.
-- **Seamless Integration**: Ensures accurate and context-aware responses by integrating retrieval and generation in a unified workflow.
+## What is RAG?
 
-## Applications
-1. **Customer Support**: Automating responses to customer queries with precise, knowledge-based answers.
-2. **Knowledge Management**: Summarizing or extracting insights from large datasets or documents.
-3. **Research Assistance**: Providing quick access to relevant research articles, citations, or summaries.
-4. **Content Generation**: Assisting in creating articles, blogs, or other content with factual accuracy.
+**Retrieval-Augmented Generation (RAG)** is an advanced NLP framework that combines the strengths of retrieval-based methods and generative language models:
 
-## Architecture
-Below is a placeholder for the RAG architecture:
+- **Retrieval Module**: Identifies and retrieves the most relevant pieces of context from a knowledge base or document repository.
+- **Generative Module**: Uses the retrieved context to generate accurate and context-aware answers.
 
-![RAG Architecture Placeholder](2.png)
+This hybrid approach ensures high accuracy for in-context queries and robust handling of out-of-context queries.
 
-## Getting Started
+### RAG Architecture
 
-### Prerequisites
-- Python 3.8 or above
-- Libraries: `transformers`, `torch`, `faiss`, and others listed in `requirements.txt`
-- Access to a pre-trained generative model (e.g., OpenAI GPT, Hugging Face models) and a retriever like FAISS or Elasticsearch
+Below is an overview of the architecture used in this project:
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/your-repo.git
+(2.png)
 
-# Navigate to the project directory
-cd your-repo
+---
 
-# Install dependencies
-pip install -r requirements.txt
-```
+## Features
 
-### Usage
-1. **Prepare the Dataset**:
-   - Add your knowledge base or corpus in the `data/` directory.
-2. **Run the Retriever**:
+- Upload PDF documents for dynamic question-answering.
+- Real-time chat interface with a conversational feel and chat history.
+- Handles both in-context (from the document) and out-of-context queries.
+- Knowledge base powered by **ChromaDB** for fast and accurate retrieval.
+- AI-powered by **Gemini Pro (Google Generative AI)** for natural and concise responses.
+
+---
+
+## Technology Stack
+
+- **Python**: Core programming language.
+- **Streamlit**: Framework for building an interactive user interface.
+- **ChromaDB**: Knowledge base for document embedding storage and retrieval.
+- **Google Generative AI**: Provides embeddings and answers using the Gemini Pro model.
+- **LangChain**: Manages the document processing and retrieval-augmented answering pipeline.
+
+---
+
+## Installation
+
+1. Clone the repository:
    ```bash
-   python retriever.py
-   ```
-3. **Run the Generator**:
-   ```bash
-   python generator.py
-   ```
-4. **Combine RAG Workflow**:
-   ```bash
-   python rag_pipeline.py
-   ```
+   git clone https://github.com/yourusername/document-answering-rag.git
 
-### Example
-To ask a question using the RAG model:
-```bash
-python rag_pipeline.py --query "What are the applications of RAG?"
-```
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+3. Run the application:
+   ```bash
+   streamlit run app2.py
+
+## Usage
+- Upload a PDF document to initialize the knowledge base.
+- Type your queries into the chat interface.
+- View answers based on the uploaded document or external reasoning.
+
+## Screenshots
+
+1. Questions Asked from the Document Context
+   (PROJECT SS\1.png)
+
+2. Questions Asked Out of Context
+   (PROJECT SS\22.png)
+
+
+
+## Knowledge Base
+- This application uses **ChromaDB** as its backend for knowledge storage and retrieval. ChromaDB ensures efficient and scalable storage of document embeddings and allows for fast similarity searches, enabling the retrieval of the most relevant context for any query.
+
+## Future Enhancements
+- Add support for multiple file formats (e.g., Word, TXT).
+- Extend the knowledge base to integrate external APIs for broader context.
+- Optimize embeddings storage for larger-scale applications.
+- Improve response quality for out-of-context questions using advanced reasoning.
 
 ## Contributing
-We welcome contributions! Please follow the [contribution guidelines](CONTRIBUTING.md).
+- Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Acknowledgments
-- Hugging Face for pre-trained models and tools
-- Facebook AI Research for introducing RAG
+## Developed with ❤️ using RAG, ChromaDB, and Streamlit.
+
+
+### Notes for Customization:
+1. Replace placeholders with actual architecture diagrams and screenshots.
+2. Update the repository URL, if applicable.
+3. Include a `LICENSE` file if you want to distribute your project under a specific license.
